@@ -9,5 +9,9 @@ export const routes: Routes = [
     {
         path: 'products/:category',
         loadComponent: () => import('./pages/products/products')
+    },
+    {
+        path: 'product/:id',
+        loadComponent: () => import('./pages/product/product')
     }
 ];

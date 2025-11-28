@@ -1,16 +1,18 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Toolbar } from "./pages/shared/toolbar";
+import { Footer } from "./pages/shared/footer";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Toolbar, Footer],
   template: `
-    <h1>Welcome to {{ title() }}!</h1>
-
+    <app-toolbar />
     <router-outlet />
+    <app-footer />
   `,
   styles: [],
 })
 export class App {
-  protected readonly title = signal('ngDuka');
+  
 }
