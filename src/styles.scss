@@ -1,3 +1,5 @@
+// 1. Importer le module de couleur Sass
+@use "sass:color";
 /* You can add global styles to this file, and also import other style files */
 html,
 body {
@@ -12,7 +14,7 @@ body {
 }
 
 button {
-    background-color: blue($color: #000000);
+    background-color: color.adjust(#000000, $blue: 100%);
     color: white;
     border: none;
     padding: 10px 20px;
